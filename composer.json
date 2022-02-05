@@ -1,7 +1,8 @@
 {
-    "name": "author/your-package",
-    "description": "Your package description",
+    "name": "BUSAGit/UI-Test",
+    "description": "Testing out UI creation",
     "license": "GPL-3.0-or-later",
+	"type": "seat-plugin",
     "authors": [
         {
             "name": "Leon Jacobs",
@@ -10,24 +11,20 @@
     ],
     "autoload": {
         "psr-4": {
-            "Author\\Seat\\YourPackage\\": "src/"
+            "BUSAGit\\Seat\\UI-Test\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "prefer-stable": true,
     "require": {
         "php": "^7.3",
         "laravel/framework": "^6.2",
         "eveseat/web": "^4.0"
     },
-    "require-dev": {
-        "orchestra/testbench": "^4.0",
-        "orchestra/database": "^4.0"
-    },
     "extra": {
         "laravel": {
             "providers": [
-                "Author\\Seat\\YourPackage\\WebServiceProvider"
+                "BUSAGit\\Seat\\UI-Test\\UITestServiceProvider"
             ]
         }
     }

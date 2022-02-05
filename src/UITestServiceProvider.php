@@ -18,46 +18,44 @@ You should have received a copy of the GNU General Public License along
 with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
-
-namespace Author\Seat\YourPackage;
+namespace BUSAGit\Seat\UI-Test;
 
 use Seat\Services\AbstractSeatPlugin;
 
 /**
- * Class YourPackageServiceProvider.
- *
- * @package Author\Seat\YourPackage
+ * Class CalendarServiceProvider.
+ * @package Seat\Kassie\Calendar
  */
-class YourPackageServiceProvider extends AbstractSeatPlugin
+class UITestServiceProvider extends AbstractSeatPlugin
 {
     public function boot()
     {
         $this->add_routes();
-
-        // Uncomment this block to add API documentation
+		
+		// Uncomment this block to add API documentation
         // $this->add_api_endpoints();
-
+		
         $this->add_publications();
 
         $this->add_views();
 
-        $this->add_translations();
+        //$this->add_translations();
 
         $this->add_migrations();
-
-        // Uncomment this block to extend imported SDE tables
+		
+		// Uncomment this block to extend imported SDE tables
         // $this->add_sde_tables();
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/Config/yourpackage.config.php', 'yourpackage.config');
-        $this->mergeConfigFrom(__DIR__ . '/Config/yourpackage.locale.php', 'yourpackage.locale');
+		$this->mergeConfigFrom(__DIR__ . '/Config/UI-Test.config.php', 'UI-Test.config');
+        $this->mergeConfigFrom(__DIR__ . '/Config/UI-Test.locale.php', 'UI-Test.locale');
 
-        // Overload sidebar with your package menu entries
+		// Overload sidebar with your package menu entries
         $this->mergeConfigFrom(__DIR__ . '/Config/Menu/package.sidebar.php', 'package.sidebar');
-
-        // Uncomment this block to overload character menu
+		
+		// Uncomment this block to overload character menu
         // $this->mergeConfigFrom(__DIR__ . '/Config/Menu/package.character.php', 'package.character.menu');
 
         // Uncomment this block to overload corporation menu
@@ -73,15 +71,15 @@ class YourPackageServiceProvider extends AbstractSeatPlugin
         // $this->registerPermissions(__DIR__ . '/Config/Permissions/corporation.php', 'corporation');
     }
 
-    /**
+     /**
      * Include routes.
      */
     private function add_routes()
     {
         $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
     }
-
-    /**
+	
+	/**
      * Import API annotations used to generate Swagger documentation (using Open Api Specifications syntax).
      */
     private function add_api_endpoints()
@@ -91,17 +89,25 @@ class YourPackageServiceProvider extends AbstractSeatPlugin
             __DIR__ . '/Http/Controllers/Api/V2',
         ]);
     }
-
-    /**
+	
+	 /**
      * Add content which must be published (generally, configuration files or static ones).
      */
     private function add_publications()
     {
         $this->publishes([
-            __DIR__ . '/resources/css' => public_path('web/css'),
-            __DIR__ . '/resources/img' => public_path('your-package/img'),
-            __DIR__ . '/resources/js' => public_path('your-package/js'),
+            __DIR__ . '/resources/css' => public_path('web/css')
+            //__DIR__ . '/resources/img' => public_path('UI-Test/img'),
+            //__DIR__ . '/resources/js' => public_path('UI-Test/js'),
         ], ['public', 'seat']);
+    }
+	
+    /**
+     * Import views.
+     */
+    private function add_views()
+    {
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'UI-Test');
     }
 
     /**
@@ -109,25 +115,7 @@ class YourPackageServiceProvider extends AbstractSeatPlugin
      */
     private function add_translations()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'yourpackage');
-    }
-
-    /**
-     * Import views.
-     */
-    private function add_views()
-    {
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'yourpackage');
-    }
-
-    /**
-     * Add SDE tables to be imported.
-     */
-    private function add_sde_tables()
-    {
-        $this->registerSdeTables([
-            'mapJumps',
-        ]);
+        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'UI-Test');
     }
 
     /**
@@ -138,16 +126,30 @@ class YourPackageServiceProvider extends AbstractSeatPlugin
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations/');
     }
 
+    private function addCommands() 
+    {
+    }
+
+	/**
+     * Add SDE tables to be imported.
+     */
+    private function add_sde_tables()
+    {
+        $this->registerSdeTables([
+            'mapJumps',
+        ]);
+    }
+
     /**
      * Return the plugin public name as it should be displayed into settings.
      *
-     * @return string
      * @example SeAT Web
      *
+     * @return string
      */
     public function getName(): string
     {
-        return 'Your Package Friendly Name';
+        return 'UI-Test';
     }
 
     /**
@@ -159,40 +161,40 @@ class YourPackageServiceProvider extends AbstractSeatPlugin
      */
     public function getPackageRepositoryUrl(): string
     {
-        return 'https://example.com';
+        return 'https://github.com/BUSAGit/UI-Test';
     }
 
     /**
      * Return the plugin technical name as published on package manager.
      *
-     * @return string
      * @example web
      *
+     * @return string
      */
     public function getPackagistPackageName(): string
     {
-        return 'your-package';
+        return 'UI-Test';
     }
 
     /**
      * Return the plugin vendor tag as published on package manager.
      *
-     * @return string
      * @example eveseat
      *
+     * @return string
      */
     public function getPackagistVendorName(): string
     {
-        return 'author';
+        return 'BUSAGit';
     }
-
-    /**
+	
+	/**
      * Return the plugin installed version.
      *
      * @return string
      */
     public function getVersion(): string
     {
-        return config('yourpackage.config.version');
+        return config('UI-Test.config.version');
     }
 }

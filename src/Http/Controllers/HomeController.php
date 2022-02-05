@@ -19,7 +19,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-namespace Author\Seat\YourPackage\Http\Controllers;
+namespace BUSAGit\Seat\UI-Test\Http\Controllers;
 
 use Seat\Web\Http\Controllers\Controller;
 
@@ -35,7 +35,6 @@ class HomeController extends Controller
      */
     public function getHome()
     {
-
-        return view('yourpackage::myview');
+        return view('UI-Tests::myview');
     }
 }
