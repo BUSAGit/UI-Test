@@ -22,7 +22,7 @@
 
 // Namespace all of the routes for this package.
 Route::group([
-    'namespace'  => 'BUSAGit\Seat\UI-Test\Http\Controllers',
+    'namespace'  => 'BUSAGit\Seat\UITest\Http\Controllers',
     'middleware' => ['web', 'auth', 'locale'],
 ], function () {
 
