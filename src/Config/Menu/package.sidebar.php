@@ -23,18 +23,18 @@ return [
 
     // Integrating with the SeAT menu is defined here.
     // Refer to the web package for a structure reference.
-    'your-package' => [
-        'name' => 'menu-entry-name',
-        'label' => 'yourpackage::menu.main_level',
+    'UI-Test' => [
+        'name' => 'UI-Test',
+        'label' => 'UI-Test::menu.main_level',
         'plural' => true,
         'icon' => 'fas fa-certificate',
-        'route_segment' => 'yourpackage',
+        'route_segment' => 'UI-Test',
         'entries' => [
             [
                 'name' => 'menu-sub-entry-name',
-                'label' => 'yourpackage::menu.sub_level',
+                'label' => 'UI-Test::menu.sub_level',
                 'icon' => 'fas fa-th-list',
-                'route' => 'your-package.home',
+                'route' => 'UI-Test.home',
             ],
         ],
     ],

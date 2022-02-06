@@ -24,7 +24,7 @@ return [
     // Describing generic permissions is done here.
     // Refer to the web package for a structure reference.
     'other_permission_name' => [
-        'label' => 'yourpackage::permissions.other_permission_name_label',
-        'description' => 'yourpackage::permissions.other_permission_name_description',
+        'label' => 'UI-Test::permissions.other_permission_name_label',
+        'description' => 'UI-Test::permissions.other_permission_name_description',
     ]
 ];
