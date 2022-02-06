@@ -50,7 +50,7 @@ class UITestServiceProvider extends AbstractSeatPlugin
     public function register()
     {
 		$this->mergeConfigFrom(__DIR__ . '/Config/UI-Test.config.php', 'UI-Test.config');
-        $this->mergeConfigFrom(__DIR__ . '/Config/UI-Test.locale.php', 'UI-Test.locale');
+        //$this->mergeConfigFrom(__DIR__ . '/Config/UI-Test.locale.php', 'UI-Test.locale');
 
 		// Overload sidebar with your package menu entries
         $this->mergeConfigFrom(__DIR__ . '/Config/Menu/package.sidebar.php', 'package.sidebar');
