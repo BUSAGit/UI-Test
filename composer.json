@@ -14,7 +14,7 @@
             "BUSAGit\\Seat\\UI-Test\\": "src/"
         }
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^7.3",
