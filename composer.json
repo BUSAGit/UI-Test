@@ -2,6 +2,8 @@
     "name": "BUSAGit/UI-Test",
     "description": "Testing out UI creation",
     "license": "GPL-3.0-or-later",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"type": "seat-plugin",
     "authors": [
         {
@@ -14,8 +16,6 @@
             "BUSAGit\\Seat\\UI-Test\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
         "php": "^7.3",
         "laravel/framework": "^6.2",
