@@ -25,16 +25,16 @@ return [
     // Refer to the web package for a structure reference.
     'UI-Test' => [
         'name' => 'UI-Test',
-        'label' => 'UI-Test::menu.main_level',
-        'plural' => true,
-        'icon' => 'fas fa-certificate',
+        //'label' => 'UI-Test::menu.main_level',
+        //'plural' => true,
+        'icon' => 'fas fa-info',
         'route_segment' => 'UI-Test',
         'entries' => [
             [
                 'name' => 'menu-sub-entry-name',
                 'label' => 'UI-Test::menu.sub_level',
                 'icon' => 'fas fa-th-list',
-                'route' => 'UI-Test.home',
+                'route' => 'UITest.home',
             ],
         ],
     ],

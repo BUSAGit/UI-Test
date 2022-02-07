@@ -24,11 +24,12 @@
 Route::group([
     'namespace'  => 'BUSAGit\Seat\UITest\Http\Controllers',
     'middleware' => ['web', 'auth', 'locale'],
+	'prefix' => 'UITest'
 ], function () {
 
     // Your route definitions go here.
     Route::get('/UI-Test/home', [
-        'as'   => 'UI-Test.home',
+        'as'   => 'UITest.home',
         'uses' => 'HomeController@getHome'
     ]);
 	

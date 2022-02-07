@@ -35,6 +35,6 @@ class HomeController extends Controller
      */
     public function getHome()
     {
-        return view('UI-Tests::myview');
+        return view('UITests::myview');
     }
 }
