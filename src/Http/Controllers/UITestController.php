@@ -36,6 +36,10 @@ class UITestController extends Controller
     public function getHome()
     {
 		echo "<script>console.log('Button Pressed');</script>";
-        return view('UITests::myview');
+		if(View::exists('UITest::myview') == false)
+		{
+			echo "<script>console.log('View Does not exist');</script>";
+		}
+        return view('UITest::myview');
     }
 }
