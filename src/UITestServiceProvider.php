@@ -107,7 +107,7 @@ class UITestServiceProvider extends AbstractSeatPlugin
      */
     private function add_views()
     {
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'UI-Test');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'UITest');
     }
 
     /**
@@ -115,7 +115,7 @@ class UITestServiceProvider extends AbstractSeatPlugin
      */
     private function add_translations()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'UI-Test');
+        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'UITest');
     }
 
     /**
@@ -149,7 +149,7 @@ class UITestServiceProvider extends AbstractSeatPlugin
      */
     public function getName(): string
     {
-        return 'UI-Test';
+        return 'UITest';
     }
 
     /**
@@ -173,7 +173,7 @@ class UITestServiceProvider extends AbstractSeatPlugin
      */
     public function getPackagistPackageName(): string
     {
-        return 'UI-Test';
+        return 'UITest';
     }
 
     /**
@@ -195,6 +195,6 @@ class UITestServiceProvider extends AbstractSeatPlugin
      */
     public function getVersion(): string
     {
-        return config('UI-Test.config.version');
+        return config('UITest.config.version');
     }
 }

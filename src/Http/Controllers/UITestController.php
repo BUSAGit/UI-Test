@@ -28,13 +28,14 @@ use Seat\Web\Http\Controllers\Controller;
  *
  * @package Author\Seat\YourPackage\Http\Controllers
  */
-class HomeController extends Controller
+class UITestController extends Controller
 {
     /**
      * @return \Illuminate\View\View
      */
     public function getHome()
     {
+		echo "<script>console.log('Button Pressed');</script>";
         return view('UITests::myview');
     }
 }

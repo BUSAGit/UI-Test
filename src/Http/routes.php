@@ -30,7 +30,7 @@ Route::group([
     // Your route definitions go here.
     Route::get('/page1', [
         'as'   => 'UITest.home',
-        'uses' => 'HomeController@getHome'
+        'uses' => 'UITestController@getHome'
     ]);
 	
 });
