@@ -1,4 +1,4 @@
-/*
+
 @extends('web::layouts.grids.12')
 
 @section('title', trans('UITest::global.browser_title'))
@@ -19,4 +19,3 @@
 
 </script>
 @endpush
-*/

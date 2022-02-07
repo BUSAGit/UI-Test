@@ -22,6 +22,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 namespace BUSAGit\Seat\UITest\Http\Controllers;
 
 use Seat\Web\Http\Controllers\Controller;
+use Illuminate\Database\QueryException;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Class HomeController.
@@ -36,9 +39,13 @@ class UITestController extends Controller
     public function getHome()
     {
 		echo "<script>console.log('Button Pressed');</script>";
-		if(View::exists('UITest::myview') == false)
+		if(view::exists('UITest::myview') == false)
 		{
 			echo "<script>console.log('View Does not exist');</script>";
+		}
+		else
+		{
+			echo "<script>console.log('View Does Exist');</script>";
 		}
         return view('UITest::myview');
     }

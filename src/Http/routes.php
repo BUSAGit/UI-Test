@@ -23,12 +23,12 @@
 // Namespace all of the routes for this package.
 Route::group([
     'namespace'  => 'BUSAGit\Seat\UITest\Http\Controllers',
-    'middleware' => ['web', 'auth', 'locale'],
+    'middleware' => ['web', 'auth'],
 	'prefix' => 'UITest'
 ], function () {
 
     // Your route definitions go here.
-    Route::get('/page1', [
+    Route::get('/home', [
         'as'   => 'UITest.home',
         'uses' => 'UITestController@getHome'
     ]);
