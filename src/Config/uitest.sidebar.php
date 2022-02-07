@@ -23,16 +23,16 @@ return [
 
     // Integrating with the SeAT menu is defined here.
     // Refer to the web package for a structure reference.
-    'UI-Test' => [
+    'UITest' => [
         'name' => 'UI-Test',
         //'label' => 'UI-Test::menu.main_level',
         //'plural' => true,
         'icon' => 'fas fa-info',
-        'route_segment' => 'UI-Test',
+        'route_segment' => 'UITest',
         'entries' => [
             [
                 'name' => 'menu-sub-entry-name',
-                'label' => 'UI-Test::menu.sub_level',
+                'label' => 'SubMenu',
                 'icon' => 'fas fa-th-list',
                 'route' => 'UITest.home',
             ],

@@ -1,8 +1,8 @@
 @extends('web::layouts.grids.12')
 
-@section('title', trans('UI-Test::global.browser_title'))
-@section('page_header', trans('UI-Test::global.page_title'))
-@section('page_description', trans('UI-Test::global.page_subtitle'))
+@section('title', trans('UITest::global.browser_title'))
+@section('page_header', trans('UITest::global.page_title'))
+@section('page_description', trans('UITest::global.page_subtitle'))
 
 @section('full')
 

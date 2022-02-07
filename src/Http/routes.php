@@ -28,7 +28,7 @@ Route::group([
 ], function () {
 
     // Your route definitions go here.
-    Route::get('/UI-Test/home', [
+    Route::get('/page1', [
         'as'   => 'UITest.home',
         'uses' => 'HomeController@getHome'
     ]);
